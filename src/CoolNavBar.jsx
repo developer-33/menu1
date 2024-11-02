@@ -78,7 +78,7 @@ const AnimatedLogo = () => (
     />
     {/* Glowing Text */}
     <h1 className="text-3xl font-bold text-green-400 neon-glow">
-      CoolLogo
+      Garage X
     </h1>
   </div>
 );
