@@ -1,11 +1,11 @@
 import "./index.css"
 // import Messenger from "./Messenger"
-import ClockworkNavbar from "./Navbar"
+import SteamPunkNavbar from "./Navbar"
 const App = () => {
   return (
     <div>
       {/* <Messenger /> */}
-      <ClockworkNavbar />
+      <SteamPunkNavbar />
     </div>
   )
 }
