@@ -102,12 +102,8 @@ body {
   }
 }
 
-.swing-hammer {
-  display: inline-block;
-  animation: swing 1s ease-in-out infinite;
-}
 
-/* Gear button focus effect */
-.gear-toggle:focus {
-  background-color: #b45309; /* Dark amber on focus */
+
+.neon-glow {
+  text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 40px #39ff14;
 }

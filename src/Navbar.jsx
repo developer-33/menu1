@@ -3,6 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes, faCog, faHome, faCompass, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { motion } from 'framer-motion';
 
+import "./index.css"
+
 const SteampunkNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -10,10 +12,14 @@ const SteampunkNavbar = () => {
     <>
       {/* Top Navbar */}
       <nav className="bg-black shadow-2xl p-4 font-cinzel text-green-400 border-b-4 border-green-600">
+      <AnimatedLogo />
         <div className="container mx-auto flex justify-between items-center">
           {/* Brand / Logo */}
-          <h1 className="text-3xl font-bold text-green-400">Garage X</h1>
-
+          <h1 className="text-3xl font-bold text-green-400">
+           
+          
+          </h1>
+     
           {/* Hamburger Button */}
           <button
             className="text-green-500 focus:outline-none lg:hidden"
@@ -23,13 +29,19 @@ const SteampunkNavbar = () => {
           </button>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex space-x-6">
-            <NavItem icon={faHome} label="Home" />
+          <div className="hidden lg:flex justify-end space-x-6 ">
+        
+          
+                 <NavItem icon={faHome} label="Home" />
             <NavItem icon={faCompass} label="Explore" />
             <NavItem icon={faEnvelope} label="Contact" />
             <NavItem icon={faCog} label="Settings" />
+    
+     
           </div>
         </div>
+
+
       </nav>
 
       {/* Side Pop-Out Menu */}
@@ -50,17 +62,33 @@ const SteampunkNavbar = () => {
           <NavItem icon={faCompass} label="prto" />
           <NavItem icon={faEnvelope} label="Contact" />
           <NavItem icon={faCog} label="Settings" />
+        
         </div>
       </motion.div>
     </>
   );
 };
 
-const NavItem = ({ icon, label }) => (
+const NavItem = ({  label, }) => (
   <a href="/" className="flex items-center space-x-2 group hover:text-yellow-400 transition duration-200">
-    <FontAwesomeIcon icon={icon} className="text-green-600 group-hover:rotate-90 group-hover:scale-110 transition duration-300" />
+    <FontAwesomeIcon icon={AnimatedLogo} className="text-green-600 group-hover:rotate-90 group-hover:scale-110 transition duration-300" />
     <span className="font-cinzel text-green-600">{label}</span>
   </a>
+  
+);
+
+const AnimatedLogo = () => (
+  <div className="flex items-center space-x-2">
+    {/* Rotating Icon */}
+    <FontAwesomeIcon 
+      icon={AnimatedLogo}  
+      className="text-green-400 text-3xl animate-spin-slow" 
+    />
+    {/* Glowing Text */}
+    <h1 className="text-3xl font-bold text-green-400 neon-glow">
+      CoolLogo
+    </h1>
+  </div>
 );
 
 export default SteampunkNavbar;
